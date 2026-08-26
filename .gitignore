@@ -1,3 +1,6 @@
 
 archive/
 *.csv
+
+__pycache__/
+*.pyc
