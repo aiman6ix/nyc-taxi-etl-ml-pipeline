@@ -4,3 +4,18 @@ archive/
 
 __pycache__/
 *.pyc
+
+# Virtual environments
+venv/
+env/
+test_env/
+
+#Environment secrets
+.env
+
+# IDE settings
+.vscode/
+.idea/
+
+# Docker persistent data
+postgres_data/
