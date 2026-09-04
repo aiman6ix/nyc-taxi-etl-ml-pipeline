@@ -16,6 +16,13 @@ jobs:
       - name: Checkout Github code
         uses: actions/checkout@v4
 
+    # PySpark requires Java to run
+    - name: Setup JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
     # Setup environemnt
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,5 +39,8 @@ jobs:
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
+      - name: Run Pyspark Tests with pytest
+        run: |
+          pytest
 
   
