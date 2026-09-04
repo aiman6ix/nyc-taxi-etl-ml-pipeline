@@ -32,4 +32,4 @@ jobs:
       # Validates Python bytecode compilation without executing PySpark or DB writes
       - name: Compile check etl.py
         run: |
-          python -m py_compile etl.py
+          python -m py_compile src/etl.py
